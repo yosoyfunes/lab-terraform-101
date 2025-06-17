@@ -21,7 +21,10 @@ Crear una infraestructura mínima en AWS LocalStack utilizando Terraform
 
 ## Instrucciones
 
-1. Iniciar LocalStack `localstack start -d`
+1. Iniciar LocalStack 
+```bash
+localstack start -d
+```
 2. Setear variables de entorno:
 ```bash
 export AWS_ENDPOINT_URL=http://localhost:4566
@@ -33,8 +36,14 @@ export AWS_SECRET_ACCESS_KEY=test
 ```bash
 aws s3 mb s3://tfstate-bucket
 ```
-4. Ejecutar `terraform init`
-5. Ejecutar `terraform apply`
+4. Iniciar Terraform 
+```bash
+terraform init
+```
+5. Aplicar Terraform 
+```bash
+terraform apply
+```
 6. Acceder por SSH a la IP pública mostrada en la salida (`instance_public_ip`)
 
 **Nota:** Este laboratorio no requiere conectarse a la instancia, está diseñado para practicar la creación de recursos básicos.
